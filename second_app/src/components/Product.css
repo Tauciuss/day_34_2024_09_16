@@ -1,0 +1,92 @@
+.product-container{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 200px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    width: fit-content;
+    align-self: center;
+    margin-top: -1px;
+}
+
+.thumbnail{
+    position: relative;
+    background-color: white;
+}
+.thumbnail img{
+    height: 190px;
+}
+
+.thumbnail .discount{
+    font-family: Arial, Helvetica, sans-serif;
+    position:absolute;
+    left: 137px;
+    top: 0px;
+    color: black;
+    background-color: coral;
+    padding: 0px 10px;
+}
+
+.text-area{
+    width: 500px;
+    margin: 0px 20px 20px 20px;
+}
+
+.text-area .brand-name{ 
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightblue;
+}
+
+.text-area .description, .full-star, .empty-star{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.text-area .full-star, .empty-star{
+    width: 20px;
+    height: 20px;
+}
+/* PRICES */
+.discount-price{
+    color: red;
+    font-size: 25px;
+}
+
+.original-price{
+    color: gray;
+    text-decoration: line-through;
+    font-size: 20px;
+    line-height: 0;
+    padding-top: -10px;
+}
+
+.purchase{
+    display: flex;
+    flex-direction: column;
+}
+
+.purchase .cart-button{
+    color: black;
+    background-color: orange;
+    border-radius: 5px;
+}
+
+/* STARS */
+.stars {
+    position: relative;
+    width: fit-content;
+}
+
+.stars .active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; 
+    overflow: hidden;
+}
+
+.stars .wrapper {
+    width: 90px;
+    white-space: nowrap;
+}
