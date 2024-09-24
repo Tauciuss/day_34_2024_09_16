@@ -1,34 +1,29 @@
 import { useState, useEffect } from 'react';
-import './Cart.css'
+import CartProduct from '../cart-product/CartProduct';
+
+import './Style.css';
+import './Shadow.css';
+import './Cart.css';
 
 function Cart() {
   const [products, setProducts] = useState([]);
+  
 
   useEffect(() => {
     const selectedProducts = JSON.parse(localStorage.getItem('selected_products')) || [];
     setProducts(selectedProducts);
   }, []);
 
-  const openCart = () => {
-  };
-
-  const closeCart = () => {
-  };
-
+  const buyMiddle = () =>{
+    console.log(products);
+    return products.map((value) => {
+        <CartProduct data={value}/>
+    })
+    
+  }
+  const closeCart = () =>{}
   return (
     <>
-      <div className="main">
-        <div className="cart-container">
-          <div className="icon-cart">Items in shopping Cart</div>
-          <div className="quantity">{products.length}</div>
-          <span onClick={openCart} id="cart-btn" className="material-symbols-outlined">
-            shopping_cart
-          </span>
-          <div className="cart"></div>
-        </div>
-        <div className="result"></div>
-      </div>
-
       <div className="shadow"></div>
       <div className="buy-cart">
         <div className="items-cart">
@@ -36,9 +31,11 @@ function Cart() {
             <div className="left">Shopping cart</div>
             <div className="right"></div>
           </div>
-          <div className="buy-middle"></div>
+          <div className="buy-middle">
+            {buyMiddle()}
+          </div>
           <div onClick={closeCart} id="back-main" className="bottom">
-            <span className="material-symbols-outlined">arrow_back</span>Back to shop
+            <span className="material-symbols-outlined">◀ </span>Back to shop
           </div>
         </div>
         <div className="summary">
