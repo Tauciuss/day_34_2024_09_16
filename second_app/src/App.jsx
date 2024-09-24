@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Product from './components/Product'
+import Cart from './components/cart/Cart.jsx';
 import './App.css'
 
 function App() {
@@ -132,7 +133,8 @@ function App() {
   return (
     <>
       <div className="main-container">
-        {prods}
+        <Cart />
+
       </div>
     </>
   )
